@@ -49,6 +49,8 @@ function Ninja({user}) {
            <h1>{user.email}</h1>
            <h1>Comapany Name:{user.company.name}</h1>  
            <Image src="/28su9mp.jpg" height={500} width={1250}/>
+           <Image src="/28su9mp.jpg" height={500} width={1250}/>
+
 
             
         </div>
