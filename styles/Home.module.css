@@ -107,6 +107,13 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.notFound a:hover,
+.notFound a:focus,
+.notFound a:active {
+  text-decoration: underline;
+  color: aqua;
+}
+
 
 @media (max-width: 600px) {
   .grid {
