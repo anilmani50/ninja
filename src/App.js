@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Postdata from './Postdata';
+import Count from './Count';
+import Display from './Display';
+import React,{createContext, useState} from 'react';
 
+export const store=createContext();
 function App() {
+ 
+  const [data,setData]=useState([
+    {
+      brandname:"nokia"
+    },
+    {
+      brandname:"Sansung"
+
+    },
+  ]);
+  
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+  {/*<Postdata/>*/}  
+  <store.Provider value={[data,setData]} >
+    <Count/>
+    <Display />
+
+    </store.Provider>
+    </>
   );
 }
 
